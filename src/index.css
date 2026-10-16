@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+:root {
+  --font-display: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --font-rounded: 'SF Pro Rounded', 'Hiragino Maru Gothic ProN', Meiryo, 'MS PGothic', sans-serif;
+  --font-serif: Georgia, 'Times New Roman', serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-display);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Keyframes matching Expo starter animations */
+@keyframes expo-pulse-glow {
+  0% {
+    transform: rotate(0deg) scale(0.9);
+    opacity: 0.7;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg) scale(0.9);
+    opacity: 0.7;
+  }
+}
+
+@keyframes expo-pop-in {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  65% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes expo-fade-scale {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-expo-glow {
+  animation: expo-pulse-glow 20s linear infinite;
+}
+
+.animate-expo-bg {
+  animation: expo-pop-in 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-expo-logo {
+  animation: expo-fade-scale 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.expo-logo-background {
+  background-image: linear-gradient(180deg, #3c9ffe, #0274df);
+  border-radius: 40px;
+  width: 128px;
+  height: 128px;
+  box-shadow: 0 10px 25px -5px rgba(2, 116, 223, 0.3);
+}
